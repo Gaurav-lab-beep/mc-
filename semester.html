@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semester | DTU MSC Physics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">DTU MSC Physics</div>
+    <nav>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="semester.html">Semester</a></li>
+        <li><a href="Professor.html">Professor</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="alumni.html">Alumni</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="semester-buttons">
+      <button onclick="showSemester('sem1')">Semester 1</button>
+      <button onclick="showSemester('sem2')">Semester 2</button>
+      <button onclick="showSemester('sem3')">Semester 3</button>
+      <button onclick="showSemester('sem4')">Semester 4</button>
+    </div>
+
+    <div id="sem1" class="semester active">
+      <h2>Semester 1</h2>
+      <ul class="subjects">
+        <li>Electronic <span class="upload-controls"><label for="file1">Upload</label><input type="file" id="file1"><button>Download</button></span></li>
+        <li>Applied Optics <span class="upload-controls"><label for="file2">Upload</label><input type="file" id="file2"><button>Download</button></span></li>
+        <li>Quantum Mechanics <span class="upload-controls"><label for="file3">Upload</label><input type="file" id="file3"><button>Download</button></span></li>
+        <li>Classical Mechanics <span class="upload-controls"><label for="file4">Upload</label><input type="file" id="file4"><button>Download</button></span></li>
+        <li>Mathematical Physics <span class="upload-controls"><label for="file5">Upload</label><input type="file" id="file5"><button>Download</button></span></li>
+      </ul>
+    </div>
+
+    <div id="sem2" class="semester">
+      <h2>Semester 2</h2>
+      <ul class="subjects">
+        <li>Solid State Physics <span class="upload-controls"><label for="file6">Upload</label><input type="file" id="file6"><button>Download</button></span></li>
+        <li>Electrodynamics <span class="upload-controls"><label for="file7">Upload</label><input type="file" id="file7"><button>Download</button></span></li>
+        <li>Computational Methods <span class="upload-controls"><label for="file8">Upload</label><input type="file" id="file8"><button>Download</button></span></li>
+        <li>Advanced Quantum Mechanics <span class="upload-controls"><label for="file9">Upload</label><input type="file" id="file9"><button>Download</button></span></li>
+        <li>Statistical Mechanics <span class="upload-controls"><label for="file10">Upload</label><input type="file" id="file10"><button>Download</button></span></li>
+      </ul>
+    </div>
+
+    <div id="sem3" class="semester">
+      <h2>Semester 3</h2>
+      <ul class="subjects">
+        <li>Atomic and Molecular Physics <span class="upload-controls"><label for="file11">Upload</label><input type="file" id="file11"><button>Download</button></span></li>
+        <li>Nuclear and Particle Physics <span class="upload-controls"><label for="file12">Upload</label><input type="file" id="file12"><button>Download</button></span></li>
+        <li>Plasma Physics <span class="upload-controls"><label for="file13">Upload</label><input type="file" id="file13"><button>Download</button></span></li>
+        <li>Fibre and Integrated Optics <span class="upload-controls"><label for="file14">Upload</label><input type="file" id="file14"><button>Download</button></span></li>
+        <li>Characterization Techniques <span class="upload-controls"><label for="file15">Upload</label><input type="file" id="file15"><button>Download</button></span></li>
+      </ul>
+    </div>
+
+    <div id="sem4" class="semester">
+      <h2>Semester 4</h2>
+      <ul class="subjects">
+        <li>Advanced Semiconductor Devices <span class="upload-controls"><label for="file16">Upload</label><input type="file" id="file16"><button>Download</button></span></li>
+        <li>Advanced Functional Materials <span class="upload-controls"><label for="file17">Upload</label><input type="file" id="file17"><button>Download</button></span></li>
+        <li>Lasers and Spectroscopy <span class="upload-controls"><label for="file18">Upload</label><input type="file" id="file18"><button>Download</button></span></li>
+        <li>Space and Atmospheric Science <span class="upload-controls"><label for="file19">Upload</label><input type="file" id="file19"><button>Download</button></span></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DTU MSC Physics. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSemester(id) {
+      const semesters = document.querySelectorAll('.semester');
+      semesters.forEach(sem => sem.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
